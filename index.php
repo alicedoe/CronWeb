@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>CronWeb by Fisher Innovation</title>
+    <title>Clar de luna - Campana</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="A responsive HTML5/PHP crontab manager.">
     <meta name="author" content="Fisher Innovation">
@@ -16,75 +16,43 @@
     <div class="container">
       <div class="masthead">
         <ul class="nav nav-pills pull-right">
-          <li class="nav-home active"><a href="#" onclick="changePage('home');">Home</a></li>
-          <li class="nav-new"><a href="#new" onclick="changePage('new');">New Cronjob</a></li>
-          <li class="nav-active"><a href="#active" onclick="changePage('active');">Active Cronjobs</a></li>
+          <li class="nav-new active"><a href="#new" onclick="changePage('new');">Crear una novela tasca</a></li>
+          <li class="nav-active"><a href="#active" onclick="changePage('active');">Tascas en cors</a></li>
         </ul>
-        <h1><a onclick="changePage('home');">Cronweb <span class="muted">by Fisher Innovation</span></a></h1>
+        <h1><a onclick="changePage('new');">Clar de luna - Campana</a></h1>
       </div>
 
       <hr>
-
-      <div id="home">
-        <div class="jumbotron">
-          <h1>Manage Your Cronjobs Anywhere!</h1>
-          <p class="lead">Enough dealing with tricky Cronjob syntax. Manage your users crontab via the web easily.</p>
-        </div>
-
-        <hr>
-
-        <div class="row-fluid marketing">
-          <div class="span6">
-            <h4>How it Works</h4>
-            <p>It's pretty simple. Rather then dealing with criptic crontab time syntax and script reference by hand, this simple and straight forward web interface allows you to easily add and remove cronjobs on your system in seconds.</p>
-          </div>
-
-          <div class="span6">
-            <h4>Project Source</h4>
-            <p>Feel free to contribute to this project at any time by visiting the project GitHub page. You can also find the issue track as well in case you have encounted any undocumented issues.</p>
-            
-            <iframe src="http://ghbtns.com/github-btn.html?user=fisherinnovation&repo=CronWeb&type=fork&count=true&size=large"
-  allowtransparency="true" frameborder="0" scrolling="0" width="130" height="30"></iframe>
-
-            <iframe src="http://ghbtns.com/github-btn.html?user=fisherinnovation&repo=CronWeb&type=watch&count=true&size=large"
-  allowtransparency="true" frameborder="0" scrolling="0" width="170" height="30"></iframe>
-            <br>
-  <iframe src="http://ghbtns.com/github-btn.html?user=fisherinnovation&repo=CronWeb&type=follow&count=true&size=large"
-  allowtransparency="true" frameborder="0" scrolling="0" width="250" height="30"></iframe>
-
-          </div>
-        </div>
-      </div>
 
       <div id="new">
         <div class="row-fluid">
           <form>
           <div class="span6">
               <fieldset>
-                <legend>Legend</legend>
-                <label>Minute</label>
-                <input class="add-minute" type="text" placeholder="0-59 or *">
+                <legend>Legenda</legend>
+                <label>Minuta</label>
+                <input class="add-minute" type="text" placeholder="0-59 ou *">
                 
-                <label>Hour</label>
-                <input class="add-hour" type="text" placeholder="0-23 or *">
+                <label>Ora</label>
+                <input class="add-hour" type="text" placeholder="0-23 ou *">
                 
-                <label>Day of Week</label>
-                <input class="add-dayweek" type="text" placeholder="0-6 or *">
+                <label>Jorn (Mes)</label>
+                <input class="add-daymonth" type="text" placeholder="0-31 ou *">
 
-                <label>Day of Month</label>
-                <input class="add-daymonth" type="text" placeholder="0-31 or *">
+                <label>Mes</label>
+                <input class="add-month" type="text" placeholder="0-12 ou *">
 
-                <label>Month</label>
-                <input class="add-month" type="text" placeholder="0-12 or *">
+                <label>Jorn (Setmana)</label>
+                <input class="add-dayweek" type="text" placeholder="0-6 ou *">
               </fieldset>
           </div>
 
           <div class="span6">
-            <h4>Command to Execute</h4>
-            <p>Enter either a valid CLI command to run on the system with the current users permissions, or reference a external script for execution.</p>
+            <h4>Comanda a faire</h4>
+            <p>Picar una comanda a faire sul sistemi (utilisator : www-data), o la referencia cap a un script a faire.</p>
             <textarea class="add-command" style="width:100%;" rows="5"></textarea>
             <p>
-              <a id="save-btn" class="btn btn-large btn-success">Save New Cronjob</a>
+              <a id="save-btn" class="btn btn-large btn-success">Salvagardar la novela tasca</a>
             </p>
           </div>
           </form>
@@ -92,17 +60,17 @@
       </div>
 
       <div id="active">
-        <h3>Active Cronjobs</h3>
-        <p><a class="btn btn-danger delete-all-btn">Delete All Jobs</a></p>
+        <h3>Tascas en cors</h3>
+        <p><a class="btn btn-danger delete-all-btn">Escafar totas las tascas</a></p>
         <table class="table table-striped">
           <thead>
             <tr>
-              <th>Minute</th>
-              <th>Hour</th>
-              <th>Day of Week</th>
-              <th>Day of Month</th>
-              <th>Month</th>
-              <th>Command</th>
+              <th>Minuta</th>
+              <th>Ora</th>
+              <th>Jorn (Mes)</th>
+              <th>Mes</th>
+              <th>Jorn (Setmana)</th>
+              <th>Comanda</th>
               <th></th>
             </tr>
           </thead>

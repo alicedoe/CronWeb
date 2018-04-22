@@ -1,10 +1,10 @@
-var PAGES = ['home', 'new', 'active'];
+var PAGES = ['new', 'active'];
 
 $(document).ready(function() {
 	var hash = window.location.hash;
-	if(hash == '#new') changePage('new');
+	console.log(window.location);
+	if(hash == '#new' || hash == '') changePage('new');
 	if(hash == '#active') changePage('active');
-
 	$('#save-btn').bind('click', onSaveButtonClick);
 	$('.delete-all-btn').bind('click', onDeleteAllJobsClick);
 });
@@ -66,7 +66,7 @@ function getActiveCronjobs() {
 	  		$.each(n, function(x, y) {
 	  			items += '<td>' + y + '</td>';
 	  		});
-	  		items += '<td><a class="btn btn-warning remove_' + key + '" onclick="onDeleteJobClick(' + key + ')">Remove</a></td>';
+	  		items += '<td><a class="btn btn-warning remove_' + key + '" onclick="onDeleteJobClick(' + key + ')">Escafar</a></td>';
 	  		items += '</tr>';
 	  	});
 
